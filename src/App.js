@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 function App() {
 
-  const [numbers, setNumbers] = useState([]);
+  const [number, setNumbers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
-  const url = 'https://api.covid19india.org/data.json';
+  const url = 'https://api.covid19india.org/state_district_wise.json';
   const STATUS_SUCESS = 200;
   const STATUS_FAIL = 300;
   useEffect(() => {
