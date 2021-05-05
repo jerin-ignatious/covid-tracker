@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 function App() {
 
-  const [number, setNumbers] = useState([]);
+  const [numbers, setNumber] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
@@ -23,7 +23,7 @@ function App() {
       }
     })
     .then((number) => {
-      setNumbers(number);
+      setNumber(number);
       setIsLoading(false);
       console.log(number);
     })
@@ -44,7 +44,18 @@ function App() {
     </main>
   }
   return (
-    <h2>covid tracker setup</h2>
+    <>
+    {/* {numbers.map((cas) => {
+      const {districtData} = cas;
+        return (
+          <article key={}>
+          <p>
+            {districtData}
+          </p>
+          </article>
+        );
+    })} */}
+    </>
   );
 }
 
