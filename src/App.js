@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import StateData from './StateData';
 function App() {
 
-  const [numbers, setNumber] = useState([]);
+  const [number, setNumber] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
@@ -23,9 +24,8 @@ function App() {
       }
     })
     .then((number) => {
-      setNumber(number);
+      setNumber(number.Maharashtra);
       setIsLoading(false);
-      console.log(number);
     })
     .catch((error) => console.log(error));
   }, []);
@@ -45,16 +45,7 @@ function App() {
   }
   return (
     <>
-    {/* {numbers.map((cas) => {
-      const {districtData} = cas;
-        return (
-          <article key={}>
-          <p>
-            {districtData}
-          </p>
-          </article>
-        );
-    })} */}
+      <StateData number={number.districtData}/>
     </>
   );
 }
